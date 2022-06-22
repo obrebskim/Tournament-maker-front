@@ -8,6 +8,8 @@ export default createGlobalStyle`
   }
   :root {
     --background: #299900;
+    --main-dark: #333;
+    --shadow: 0 0 5px rgba(0,0,0,.6);
   }
 
   html {
@@ -19,6 +21,7 @@ export default createGlobalStyle`
     padding: 0;
     height: 100vh;
     background: var(--background);
-    color: white;
+    color: var(--main-dark);
+    padding-top: 75px;
   }
 `
