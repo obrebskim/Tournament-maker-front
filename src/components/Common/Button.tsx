@@ -1,12 +1,13 @@
 import React from 'react'
 
-interface PropsTypes {
+interface Props {
     text: string,
-    onclick(): any
+    color: string,
 }
 
-export default function Button({ text, onclick }: PropsTypes) {
+export default function Button({ text }: Props) {
+
     return (
-        <button onClick={onclick}>{text}</button>
+        <button>{text}</button>
     )
 }
