@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Slider from './Slider'
-import BlogPost from './BlogPost'
+import NewsPost from './NewsPost'
 import TournamentTile from './TournamentTile'
 
 export default function Main() {
@@ -9,9 +9,9 @@ export default function Main() {
         <Container>
             <div className='placeholder'></div>
             <Slider />
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
+            <NewsPost />
+            <NewsPost />
+            <NewsPost />
             <TournamentTile />
         </Container>
     )
