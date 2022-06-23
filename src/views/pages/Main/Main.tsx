@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import Slider from './Slider'
+import TournamentTile from './TournamentTile'
 
 export default function Main() {
     return (
         <Container>
             <Slider />
+            <TournamentTile />
+            <TournamentTile />
         </Container>
     )
 }
@@ -20,7 +23,7 @@ const Container = styled.main`
     gap: 10px;
     margin: -250px auto 0 auto;
 
-    & > section {
+    & > section, & > article {
         background: #fff;
         box-shadow: var(--shadow);
     }
