@@ -10,6 +10,7 @@ import Tournaments from './components/Tournaments/Tournaments';
 import Main from './views/pages/Main/Main';
 import Navigation from './components/Navigation/Navigation';
 import Hero from './components/Hero/Hero';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/tournaments/:id' element={<Tournament />} />
         <Route path='/tournaments/create' element={<CreateTournamentForm />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

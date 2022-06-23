@@ -9,5 +9,5 @@ export default function Slider() {
 
 const Container = styled.section`
     grid-column: 1/4;
-    grid-row: 1/3;
+    grid-row: 2/4;
 `
