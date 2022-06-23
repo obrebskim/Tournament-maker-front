@@ -8,7 +8,7 @@ export default function Navigation() {
     return (
         <Container>
             <div className="wrapper">
-                <div className='logo'>logo</div>
+                <div className='logo'><img src='../../assets/Tournament_maker_logo.svg' alt='Tournament Maker Logo' /></div>
                 <ul className='navigators'>
                     <li><NavLink to='/blog'>Blog</NavLink></li>
                     <li><NavLink to='/tournaments'>Tournaments</NavLink></li>
@@ -45,6 +45,10 @@ const Container = styled.nav`
             display: flex;
             justify-content: center;
             align-items: center;
+
+            & img {
+                width: 100%;
+            }
         }
 
         & ul {
