@@ -37,6 +37,7 @@ const Container = styled.nav`
     display: flex;
     background: #fff;
     box-shadow: var(--shadow);
+    z-index: 10;
 
     & .wrapper {
         height: 100%;

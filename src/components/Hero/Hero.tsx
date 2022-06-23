@@ -19,7 +19,7 @@ const Container = styled.div`
 
     & h1 {
         position: absolute;
-        top: 70px;
+        top: 100px;
         left: 50%;
         transform: translateX(-50%);
         text-shadow: 0 0 30px #333;

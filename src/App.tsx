@@ -7,7 +7,7 @@ import {
 import CreateTournamentForm from './components/Tournaments/TournamentForm';
 import Tournament from './components/Tournaments/Tournament';
 import Tournaments from './components/Tournaments/Tournaments';
-import Main from './views/pages/Main';
+import Main from './views/pages/Main/Main';
 import Navigation from './components/Navigation/Navigation';
 import Hero from './components/Hero/Hero';
 
