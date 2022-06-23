@@ -14,7 +14,7 @@ export default createGlobalStyle`
 
   html {
     font-family: 'Montserrat', sans-serif;
-    font-size: 62,5%;
+    font-size: 62.5%;
   }
   body {
     margin: 0;
