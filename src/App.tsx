@@ -9,11 +9,13 @@ import Tournament from './components/Tournaments/Tournament';
 import Tournaments from './components/Tournaments/Tournaments';
 import Main from './views/pages/Main';
 import Navigation from './components/Navigation/Navigation';
+import Hero from './components/Hero/Hero';
 
 function App() {
   return (
     <BrowserRouter>
       <Navigation />
+      <Hero />
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/tournaments' element={<Tournaments />} />
