@@ -9,23 +9,28 @@ export default function Main() {
         <Container>
             <div className='placeholder'></div>
             <Slider />
-            <NewsPost />
-            <NewsPost />
-            <NewsPost />
             <TournamentTile />
+            <TournamentTile />
+            <TournamentTile />
+            <TournamentTile />
+            <NewsPost />
+            <NewsPost />
+            <NewsPost />
+            <NewsPost />
+            <NewsPost />
         </Container>
     )
 }
 
 const Container = styled.main`
-    height: 1000px;
     width: 1200px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(4,minmax(250px,1fr));
+    grid-auto-flow: column;
     grid-auto-rows: 250px;
     gap: 10px;
-    margin: -350px auto 0 auto;
+    margin: -350px auto 100px auto;
 
     & > section, & > article {
         background: #fff;

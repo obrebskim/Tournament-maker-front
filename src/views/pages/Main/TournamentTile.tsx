@@ -8,5 +8,5 @@ export default function TournamentTile() {
 }
 
 const Container = styled.article`
-    grid-column: 1/4;
+    grid-column: 1 / span 3;
 `
