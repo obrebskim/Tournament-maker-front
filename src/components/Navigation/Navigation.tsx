@@ -3,12 +3,17 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { BsFacebook, BsInstagram } from 'react-icons/bs'
 import { FiLock } from 'react-icons/fi'
+import Logo from '../../assets/Tournament_maker_logo.png'
 
 export default function Navigation() {
     return (
         <Container>
             <div className="wrapper">
-                <div className='logo'><img src='../../assets/Tournament_maker_logo.svg' alt='Tournament Maker Logo' /></div>
+                <div className='logo'>
+                    <NavLink to='/'>
+                        <img src={Logo} alt='Tournament Maker Logo' />
+                    </NavLink>
+                </div>
                 <ul className='navigators'>
                     <li><NavLink to='/blog'>Blog</NavLink></li>
                     <li><NavLink to='/tournaments'>Tournaments</NavLink></li>
@@ -38,7 +43,7 @@ const Container = styled.nav`
         width: 1500px;
         margin: auto;
         display: grid;
-        grid-template-columns: 100px auto 200px;
+        grid-template-columns: 150px auto 200px;
         gap: 20px;
 
         & .logo {
