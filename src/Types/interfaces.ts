@@ -6,3 +6,15 @@ export interface newsTumbnailType {
     path: string,
     feed: string,
 }
+
+export interface TournamentTileType {
+    id: string,
+    name: string,
+    location: string,
+    pool: number,
+    currency: string,
+    description: string,
+    date: string,
+    time: string,
+    price: number,
+}

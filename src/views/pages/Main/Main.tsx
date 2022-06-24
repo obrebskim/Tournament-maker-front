@@ -4,20 +4,24 @@ import Slider from './Slider'
 import NewsPost from './NewsPost'
 import TournamentTile from './TournamentTile'
 import newsTumbnailsDB from '../../../fakeDB/newsTumbnails.json'
-import { newsTumbnailType } from '../../../Types/interfaces'
+import tournamentTilesDB from '../../../fakeDB/tournamentTilesDB.json'
+import { newsTumbnailType, TournamentTileType } from '../../../Types/interfaces'
+
 
 export default function Main() {
 
-    const [newsTumbnails, setNewsTumbnails] = useState<newsTumbnailType[]>(newsTumbnailsDB)
+    const [news, setNews] = useState<newsTumbnailType[]>(newsTumbnailsDB)
+    const [tournaments, setTournaments] = useState<TournamentTileType[]>(tournamentTilesDB)
 
     return (
         <Container>
             <div className='placeholder'></div>
             <Slider />
-            <TournamentTile />
-            <TournamentTile />
             {
-                newsTumbnails.map(i => <NewsPost post={i} />)
+                tournaments.map(t => <TournamentTile key={t.id} tournament={t} />)
+            }
+            {
+                news.map(i => <NewsPost key={i.id} post={i} />)
             }
         </Container>
     )
