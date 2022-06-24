@@ -15,7 +15,7 @@ export default function Navigation() {
                     </NavLink>
                 </div>
                 <ul className='navigators'>
-                    <li><NavLink to='/blog'>Blog</NavLink></li>
+                    <li><NavLink to='/news'>News</NavLink></li>
                     <li><NavLink to='/tournaments'>Tournaments</NavLink></li>
                     <li><NavLink to='/login'><FiLock className='icon' />Login</NavLink></li>
                 </ul>

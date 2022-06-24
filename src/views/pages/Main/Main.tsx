@@ -30,7 +30,7 @@ const Container = styled.main`
     grid-auto-flow: column;
     grid-auto-rows: 250px;
     gap: 10px;
-    margin: -350px auto 100px auto;
+    margin: -250px auto 100px auto;
 
     & > section, & > article {
         background: #fff;

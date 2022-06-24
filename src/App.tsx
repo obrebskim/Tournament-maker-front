@@ -11,10 +11,12 @@ import Main from './views/pages/Main/Main';
 import Navigation from './components/Navigation/Navigation';
 import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
+import Background from './components/Common/Background';
 
 function App() {
   return (
     <BrowserRouter>
+      <Background />
       <Navigation />
       <Hero />
       <Routes>

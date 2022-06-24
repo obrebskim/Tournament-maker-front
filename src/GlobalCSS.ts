@@ -10,6 +10,7 @@ export default createGlobalStyle`
     --background: #299900;
     --main-dark: #333;
     --shadow: 0 0 5px rgba(0,0,0,.6);
+    --main-gradient: linear-gradient(90deg, rgba(255,40,0,1) 0%, rgba(255,216,0,1) 100%);
   }
 
   html {

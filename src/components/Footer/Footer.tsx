@@ -8,6 +8,7 @@ export default function Footer() {
 }
 
 const Container = styled.footer`
+    position: relative;
     height: 400px;
     background: #333;
 
