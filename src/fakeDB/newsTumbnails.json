@@ -1,26 +1,34 @@
 [
     {
+        "id": "1",
         "title": "Warmia Cup is back again!",
         "img": "https://d1b7rr0nby25az.cloudfront.net/cache-buster-1640535024/activities/beachvolleyball-516378497/image-thumb__16621459__header-fullscreen/beachvolleyball--810658095.jpg",
         "date": "2022-24-06",
-        "link": "/news"
+        "path": "/news",
+        "feed": "Eduarda Santos Lisboa and Ana Patricia Ramos of Brazil are the new champions of the world! On Sunday, Duda and Ana Patricia, Youth Olympic champions at Nanjing 2014, completed a winning run of eight consecutive victories to claim the women’s final at the Beach Volleyball World Championships Rome 2022."
     },
     {
+        "id": "2",
         "title": "Wilson introduced new bal.",
         "img": "https://image.ceneostatic.pl/data/products/93661016/i-wilson-optx-avp-volleyball-official.jpg",
         "date": "2022-24-06",
-        "link": "/news"
+        "path": "/news",
+        "feed": "Eduarda Santos Lisboa and Ana Patricia Ramos of Brazil are the new champions of the world! On Sunday, Duda and Ana Patricia, Youth Olympic champions at Nanjing 2014, completed a winning run of eight consecutive victories to claim the women’s final at the Beach Volleyball World Championships Rome 2022."
     },
     {
+        "id": "3",
         "title": "Record reward at the tournament in Jastrzębie-Zdrój",
         "img": "https://media.istockphoto.com/photos/stack-of-one-hundred-dollars-notes-picture-id1008861200?k=20&m=1008861200&s=612x612&w=0&h=T_1z_SNKVyLeKnaRa5LVnPVFIAmXCLFl658N0Fk0Stw=",
         "date": "2022-24-06",
-        "link": "/news"
+        "path": "/news",
+        "feed": "Eduarda Santos Lisboa and Ana Patricia Ramos of Brazil are the new champions of the world! On Sunday, Duda and Ana Patricia, Youth Olympic champions at Nanjing 2014, completed a winning run of eight consecutive victories to claim the women’s final at the Beach Volleyball World Championships Rome 2022."
     },
     {
+        "id": "4",
         "title": "IT Focus? Sure!",
         "img": "https://static1.s123-cdn-static-a.com/uploads/5191798/800_609e7a666e4ac.jpg",
         "date": "2022-24-06",
-        "link": "/news"
+        "path": "/news",
+        "feed": "Eduarda Santos Lisboa and Ana Patricia Ramos of Brazil are the new champions of the world! On Sunday, Duda and Ana Patricia, Youth Olympic champions at Nanjing 2014, completed a winning run of eight consecutive victories to claim the women’s final at the Beach Volleyball World Championships Rome 2022."
     }
 ]

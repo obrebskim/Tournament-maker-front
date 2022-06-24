@@ -1,20 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Slider from './Slider'
 import NewsPost from './NewsPost'
 import TournamentTile from './TournamentTile'
+import newsTumbnailsDB from '../../../fakeDB/newsTumbnails.json'
+import { newsTumbnailType } from '../../../Types/interfaces'
 
 export default function Main() {
+
+    const [newsTumbnails, setNewsTumbnails] = useState<newsTumbnailType[]>(newsTumbnailsDB)
+
     return (
         <Container>
             <div className='placeholder'></div>
             <Slider />
             <TournamentTile />
             <TournamentTile />
-            <NewsPost />
-            <NewsPost />
-            <NewsPost />
-            <NewsPost />
+            {
+                newsTumbnails.map(i => <NewsPost post={i} />)
+            }
         </Container>
     )
 }
@@ -30,7 +34,6 @@ const Container = styled.main`
     margin: -250px auto 100px auto;
 
     & > section, & > article {
-        background: #fff;
         box-shadow: var(--shadow);
     }
 

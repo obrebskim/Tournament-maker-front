@@ -9,8 +9,6 @@ interface Props {
     height?: string,
 }
 
-
-
 export default function RedirectBtn({ text, to, height = '36px', gridColumn = 'auto' }: Props) {
     return (
         <Container style={{ height, gridColumn }}>
