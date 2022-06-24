@@ -16,8 +16,10 @@ export default function Hero() {
 }
 
 const Container = styled.div`
-    height: 60vh;
+    height: 500px;
+    max-width: 1100px;
     position: relative;
+    margin: auto;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -28,8 +30,8 @@ const Container = styled.div`
 
     & p {
         position: absolute;
-        top: 30vh;
-        left: 30vw;
+        top: 60%;
+        left: 5vw;
         font-size: 9rem;
         font-weight: 800;
         font-style: italic;
@@ -45,8 +47,7 @@ const Container = styled.div`
         }
     }
     & img {
-        width: 50vw;
-        margin-left: 5vw;
+        width: 80%;
 
     }
 `
