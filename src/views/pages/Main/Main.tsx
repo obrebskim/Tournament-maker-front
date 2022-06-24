@@ -11,9 +11,6 @@ export default function Main() {
             <Slider />
             <TournamentTile />
             <TournamentTile />
-            <TournamentTile />
-            <TournamentTile />
-            <NewsPost />
             <NewsPost />
             <NewsPost />
             <NewsPost />
