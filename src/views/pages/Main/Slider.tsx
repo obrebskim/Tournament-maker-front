@@ -42,13 +42,13 @@ export default function Slider() {
                         <p className='type'>
                             Type: <span>Grand Slam </span>
                         </p>
-                        <p className='amount'>
-                            Amount: <span>24</span>
+                        <p className='teams'>
+                            Teams: <span>24</span>
                         </p>
                         <div className='rate'>
-                            Rate: <span> 5 </span>
+                            Rate: <span className='important'> 5 </span>
                         </div>
-                        <RedirectBtn text='check this out!' to='/tournaments' styles={{ gridColumn: ' -1 / -2' }} />
+                        <RedirectBtn text='check this out!' to='/tournaments' gridColumn='-1 / -2' />
                     </div>
                 </SwiperSlide>
 
@@ -84,6 +84,8 @@ const Container = styled.section`
         right: 0;
         display: grid;
         grid-template-columns: repeat(4,1fr);
+        align-items: center;
+        gap: 10px;
         padding: 40px ;
         background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(51,51,51,.8) 70%, rgba(255,216,0,0) 100%);
         font-size: 1.6rem;

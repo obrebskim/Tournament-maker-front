@@ -11,6 +11,7 @@ export default createGlobalStyle`
     --main-dark: #333;
     --shadow: 0 0 5px rgba(0,0,0,.6);
     --main-gradient: linear-gradient(90deg, rgba(255,40,0,1) 0%, rgba(255,216,0,1) 100%);
+    --secondary-gradient: linear-gradient(135deg, rgba(90,175,0,1) 0%, rgba(161,255,0,1) 100%);
   }
 
   html {
