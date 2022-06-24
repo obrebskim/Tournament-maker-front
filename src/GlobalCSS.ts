@@ -18,11 +18,11 @@ export default createGlobalStyle`
     font-size: 62.5%;
   }
   body {
+    height: 100vh;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    background: var(--background);
-    color: var(--main-dark);
     padding-top: 75px;
+    background: var(--background);
+    color: white;
   }
 `
