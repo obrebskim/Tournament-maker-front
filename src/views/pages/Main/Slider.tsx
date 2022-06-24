@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import RedirectBtn from '../../../components/Common/RedirectBtn';
 
 export default function Slider() {
     return (
@@ -47,6 +48,7 @@ export default function Slider() {
                         <div className='rate'>
                             Rate: <span> 5 </span>
                         </div>
+                        <RedirectBtn text='check this out!' to='/tournaments' styles={{ gridColumn: ' -1 / -2' }} />
                     </div>
                 </SwiperSlide>
 

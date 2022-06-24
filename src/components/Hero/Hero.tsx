@@ -48,6 +48,7 @@ const Container = styled.div`
     }
     & img {
         width: 80%;
+        transform: translateX(-120px);
 
     }
 `
