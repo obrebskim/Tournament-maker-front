@@ -9,6 +9,7 @@ export interface newsTumbnailType {
 
 export interface TournamentTileType {
     id: string,
+    image: string,
     name: string,
     location: string,
     pool: number,
