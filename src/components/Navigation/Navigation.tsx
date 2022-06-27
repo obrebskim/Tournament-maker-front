@@ -44,6 +44,7 @@ const Container = styled.nav`
         width: 1500px;
         margin: auto;
         display: grid;
+        padding: 0 20px;
         grid-template-columns: 150px auto 200px;
         gap: 20px;
 
@@ -79,7 +80,7 @@ const Container = styled.nav`
                     justify-content: center;
                     align-items: center;
                     gap:10px;
-                    background: green;
+                    background: var(--main-dark);
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
                     font-size: 1.6rem;
@@ -118,7 +119,7 @@ const Container = styled.nav`
                     }
 
                     & .icon {
-                        color: green;
+                        color: var(--main-dark);
                     }
 
                 }
@@ -127,7 +128,7 @@ const Container = styled.nav`
             &.icons a {
                 height: 75px;
                 font-size: 2rem;
-                color: green;
+                color: var(--main-dark);
                 transition: color .3s;
 
                 &.facebook:hover {
