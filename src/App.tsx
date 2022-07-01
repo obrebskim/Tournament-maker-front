@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import CreateTournamentForm from './components/Tournaments/TournamentForm';
+import CreateTournamentForm from './components/Tournaments/TournamentCreator';
 import Tournament from './components/Tournaments/Tournament';
 import Tournaments from './components/Tournaments/Tournaments';
 import Main from './views/pages/Main/Main';
@@ -23,7 +23,7 @@ function App() {
         <Route path='/' element={<Main />} />
         <Route path='/tournaments' element={<Tournaments />} />
         <Route path='/tournaments/:id' element={<Tournament />} />
-        <Route path='/tournaments/create' element={<CreateTournamentForm />} />
+        <Route path='/creator' element={<CreateTournamentForm />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -20,7 +20,7 @@ export default function Filters({ usedFilters }: Props) {
                         usedFilters.filter(f => f.checked).map(f => f.name).join()
                 }
             </div>
-            <RedirectBtn text='create your own' to='/tournaments/create' width='163px' />
+            <RedirectBtn text='create your own' to='/tournaments/creator' width='163px' />
         </Container>
     )
 }
