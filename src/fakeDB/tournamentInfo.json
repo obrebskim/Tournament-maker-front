@@ -1,0 +1,15 @@
+{
+    "id": "3",
+    "name": "Warmia Cup",
+    "country": "Poland",
+    "city": "Olsztyn",
+    "address": "ul. Plażowa 1",
+    "date": "2022-08-15",
+    "time": "9:00",
+    "price": 100,
+    "pool": 10000,
+    "currency": "PLN",
+    "description": "Let's have some fun! Meet us in Pcim, near the town lake on beach volleybal courts. Be sure we entertain you and your familly! We have all you need - sun, beach, beer and sausages!",
+    "image": "https://thumbs.dreamstime.com/b/volleyball-court-beach-24829462.jpg",
+    "url": "https://osir.olsztyn.pl/pl/ukiel"
+}

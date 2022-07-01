@@ -28,4 +28,20 @@ export interface OptionType {
 export interface FilterItemType {
     name: string,
     checked: boolean,
-} 
+}
+
+export interface TournamentType {
+    id: string,
+    name: string,
+    country: string,
+    city: string,
+    address: string,
+    date: string,
+    time: string,
+    price: number,
+    pool: number,
+    currency: string,
+    description: string,
+    image: string,
+    url: string,
+}
