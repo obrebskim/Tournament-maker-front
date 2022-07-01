@@ -4,14 +4,15 @@ import styled from 'styled-components'
 interface Props {
     text: string,
     color: string,
+    width?: string,
     type?: "button" | "submit" | "reset" | undefined,
     onclick: (param: any) => void,
 }
 
-export default function Button({ text, color, type = undefined, onclick = () => { } }: Props) {
+export default function Button({ text, color, type = undefined, width = '100%', onclick = () => { } }: Props) {
 
     return (
-        <Container color={color} type={type} onClick={onclick}>
+        <Container style={{ background: color, width }} color={color} type={type} onClick={onclick}>
             <p>{text}</p>
         </Container>
     )
