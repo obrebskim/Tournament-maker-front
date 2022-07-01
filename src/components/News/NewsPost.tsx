@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { newsTumbnailType } from '../../../Types/interfaces'
+import { newsTumbnailType } from '../../Types/interfaces'
 
 interface Props {
     post: newsTumbnailType,

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Slider from './Slider'
-import NewsPost from './NewsPost'
+import NewsPost from '../../../components/News/NewsPost'
 import TournamentTile from '../../../components/Tournaments/TournamentTile'
 import newsTumbnailsDB from '../../../fakeDB/newsTumbnails.json'
 import tournamentTilesDB from '../../../fakeDB/tournamentTilesDB.json'
