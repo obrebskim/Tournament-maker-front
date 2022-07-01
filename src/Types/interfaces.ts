@@ -23,4 +23,9 @@ export interface TournamentTileType {
 export interface OptionType {
     label: string,
     value: string,
+}
+
+export interface FilterItemType {
+    name: string,
+    checked: boolean,
 } 

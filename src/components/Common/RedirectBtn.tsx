@@ -7,11 +7,12 @@ interface Props {
     to: string,
     gridColumn?: string,
     height?: string,
+    width?: string,
 }
 
-export default function RedirectBtn({ text, to, height = '36px', gridColumn = 'auto' }: Props) {
+export default function RedirectBtn({ text, to, height = '36px', width = 'auto', gridColumn = 'auto' }: Props) {
     return (
-        <Container style={{ height, gridColumn }}>
+        <Container style={{ height, gridColumn, width }}>
             <Link to={to}>{text}</Link>
         </Container>
     )
@@ -50,7 +51,11 @@ const Container = styled.button`
     }
 
     & a {
+        height: 100%;
+        width: 100%;
         position: relative;
+        display: grid;
+        place-items: center;
         text-decoration: none;
         color: var(--main-dark);
         transition: color .2s;

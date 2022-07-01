@@ -20,7 +20,7 @@ export default function TournamentTile({ tournament }: Props) {
                 <p className="date">date: <span>{tournament.date},</span><span>{tournament.time}</span></p>
                 <p className="pool">pool: <span className='important'>{tournament.pool}</span><span className='important'>{tournament.currency}</span></p>
                 <p className="description">{tournament.description}</p>
-                <RedirectBtn text='read more' to='/tournaments' gridColumn='-1 / -2' />
+                <RedirectBtn text='read more' to={`/tournaments/${tournament.id}`} gridColumn='-1 / -2' />
             </div>
         </Container >
     )

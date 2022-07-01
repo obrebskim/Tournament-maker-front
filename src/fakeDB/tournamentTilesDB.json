@@ -22,5 +22,17 @@
         "date": "2022-07-15",
         "time": "9:00",
         "price": 50
+    },
+    {
+        "id": "3",
+        "image": "https://thumbs.dreamstime.com/b/volleyball-court-beach-24829462.jpg",
+        "name": "Warmia Cup",
+        "location": "Olsztyn",
+        "pool": 10000,
+        "currency": "PLN",
+        "description": "Let's have some fun! Meet us in Pcim, near the town lake on beach volleybal courts. Be sure we entertain you and your familly! We have all you need - sun, beach, beer and sausages!",
+        "date": "2022-08-15",
+        "time": "9:00",
+        "price": 100
     }
 ]

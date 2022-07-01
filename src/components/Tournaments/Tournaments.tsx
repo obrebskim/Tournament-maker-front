@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import Select from 'react-select'
 import styled from 'styled-components'
 import Button from '../Common/Button'
-import { OptionType, TournamentTileType } from '../../Types/interfaces'
+import { OptionType, TournamentTileType, FilterItemType } from '../../Types/interfaces'
 import tournamentTiliesDB from '../../fakeDB/tournamentTilesDB.json'
 import TournamentTile from './TournamentTile'
-import Filters from './Filters'
+import Filters from './UsedFilters'
 
 
 function Tournaments() {
@@ -14,6 +14,7 @@ function Tournaments() {
     const [regions, setRegions] = useState<OptionType[]>()
     const [cities, setCities] = useState<OptionType[]>()
     const [tournaments, setTournaments] = useState<TournamentTileType[]>(tournamentTiliesDB)
+    const [usedFilters, setUsedFilters] = useState<FilterItemType[]>([{ name: 'tournament name', checked: false }, { name: 'country', checked: false }, { name: 'region', checked: false }, { name: 'city', checked: false },])
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault()
@@ -26,7 +27,7 @@ function Tournaments() {
             <aside>
                 <h2>Find tournament</h2>
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor='name'>
+                    <label className='name' htmlFor='name'>
                         <input type='text' name='name' id='name' />
                         <p>tournament name</p>
                     </label>
@@ -53,9 +54,12 @@ function Tournaments() {
                 </form>
             </aside>
             <main>
-                <Filters />
+                <Filters usedFilters={usedFilters} />
                 {
-                    tournaments.map(t => <TournamentTile key={t.id} tournament={t} />)
+                    tournaments.length < 1 ?
+                        <p className="empty">no results</p>
+                        :
+                        tournaments.map(t => <TournamentTile key={t.id} tournament={t} />)
                 }
             </main>
         </Container>
@@ -79,6 +83,11 @@ const Container = styled.section`
         background: #fff;
         box-shadow: var(--shadow);
         color: var(--main-dark);
+        max-height: 488px;
+    }
+
+    & h2 {
+        margin-bottom: 20px;
     }
 
     & form {
@@ -92,10 +101,26 @@ const Container = styled.section`
                 margin-bottom: 5px;
             }
 
-            .select {
+            & .select {
                 order: 1;
             }
 
+            &.name {
+                & p {
+                    order: 0;
+                }
+                & input {
+                    order: 1;
+                    height: 38px;
+                    padding-left: 10px;
+                    border: 1px solid #d2d2d2;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        & button {
+            margin-top: auto;
         }
     }
 
