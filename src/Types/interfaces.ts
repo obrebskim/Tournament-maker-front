@@ -19,3 +19,8 @@ export interface TournamentTileType {
     time: string,
     price: number,
 }
+
+export interface OptionType {
+    label: string,
+    value: string,
+} 

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import RedirectBtn from '../../../components/Common/RedirectBtn'
-import { TournamentTileType } from '../../../Types/interfaces'
+import RedirectBtn from '../Common/RedirectBtn'
+import { TournamentTileType } from '../../Types/interfaces'
 
 interface Props {
     tournament: TournamentTileType,
@@ -31,6 +31,7 @@ const Container = styled.article`
     display: grid;
     grid-template-columns: .3fr .7fr;
     gap: 20px;
+    box-shadow: var(--shadow);
     background: white;
     font-size: 1.2rem;
     color: var(--main-dark);
@@ -47,6 +48,7 @@ const Container = styled.article`
         grid-template-rows: .3fr .3fr 1fr .3fr;
         gap: 10px;
         padding: 20px 40px 20px 20px;
+
 
         & .name {
             font-size: 1.8rem;
