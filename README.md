@@ -11,6 +11,8 @@ The Backend part is available in repository obrebskim/Tournament-maker-back and 
 
 Create a new tournament.
 Displaying tumbnails of existing tournaments on the home page,
+By default there are no tumbnails only hard coded elements of webpage.
+First of all you should go to creator section and create tournament.
 Watching the tournament on a dedicated subpage.
 
 ### Upcomeing Features
