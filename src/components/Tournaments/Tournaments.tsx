@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Select from 'react-select'
 import styled from 'styled-components'
 import Button from '../Common/Button'
-import { OptionType, TournamentTileType, FilterItemType } from '../../Types/interfaces'
+import { OptionType, TournamentTumbnailType, FilterItemType } from '../../Types/interfaces'
 import tournamentTiliesDB from '../../fakeDB/tournamentTilesDB.json'
 import TournamentTile from './TournamentTile'
 import Filters from './UsedFilters'
@@ -13,7 +13,7 @@ function Tournaments() {
     const [countries, setOptions] = useState<OptionType[]>([{ label: 'Germany', value: 'de' }, { label: 'Poland', value: 'pl' }, { label: 'United States', value: 'us' }])
     const [regions, setRegions] = useState<OptionType[]>()
     const [cities, setCities] = useState<OptionType[]>()
-    const [tournaments, setTournaments] = useState<TournamentTileType[]>(tournamentTiliesDB)
+    const [tournaments, setTournaments] = useState<TournamentTumbnailType[]>([])
     const [usedFilters, setUsedFilters] = useState<FilterItemType[]>([{ name: 'tournament name', checked: false }, { name: 'country', checked: false }, { name: 'region', checked: false }, { name: 'city', checked: false },])
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {

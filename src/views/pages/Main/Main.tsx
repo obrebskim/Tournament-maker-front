@@ -1,17 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Slider from './Slider'
 import NewsPost from '../../../components/News/NewsPost'
 import TournamentTile from '../../../components/Tournaments/TournamentTile'
 import newsTumbnailsDB from '../../../fakeDB/newsTumbnails.json'
-import tournamentTilesDB from '../../../fakeDB/tournamentTilesDB.json'
-import { newsTumbnailType, TournamentTileType } from '../../../Types/interfaces'
+import { newsTumbnailType, TournamentTumbnailType } from '../../../Types/interfaces'
 
 
 export default function Main() {
 
     const [news, setNews] = useState<newsTumbnailType[]>(newsTumbnailsDB)
-    const [tournaments, setTournaments] = useState<TournamentTileType[]>(tournamentTilesDB)
+    const [tournaments, setTournaments] = useState<TournamentTumbnailType[]>([])
+
+    useEffect(() => {
+        (async () => {
+            try {
+                const resp = await fetch('http://localhost:3001/tournament/tumbnails')
+                const data = await resp.json()
+                console.log(data)
+                setTournaments(data)
+            } catch (err) {
+                console.error("Something went wrong with tumbnails fetching!")
+            }
+        })()
+    }, [])
 
     return (
         <Container>

@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import RedirectBtn from '../Common/RedirectBtn'
-import { TournamentTileType } from '../../Types/interfaces'
+import { TournamentTumbnailType } from '../../Types/interfaces'
 
 interface Props {
-    tournament: TournamentTileType,
+    tournament: TournamentTumbnailType,
 }
 
 export default function TournamentTile({ tournament }: Props) {
@@ -12,13 +12,13 @@ export default function TournamentTile({ tournament }: Props) {
     return (
         <Container >
             <div className="tumbnail">
-                <img src={tournament.image} alt="court" />
+                <img src={tournament.image ? tournament.image : "https://thumbs.dreamstime.com/b/volleyball-court-beach-24829462.jpg"} alt="court" />
             </div>
             <div className="info">
                 <h3 className='name'>{tournament.name}</h3>
-                <p className='location'>location: <span>{tournament.location}</span></p>
-                <p className="date">date: <span>{tournament.date},</span><span>{tournament.time}</span></p>
-                <p className="pool">pool: <span className='important'>{tournament.pool}</span><span className='important'>{tournament.currency}</span></p>
+                <p className='location'>location: <span>{tournament.city}</span></p>
+                <p className="date">date: <span>{tournament.date}</span><span>{tournament.time}</span></p>
+                <p className="pool">pool: <span className='important'>{tournament.pool}</span><span className='important'>{tournament.currency_code}</span></p>
                 <p className="description">{tournament.description}</p>
                 <RedirectBtn text='read more' to={`/tournaments/${tournament.id}`} gridColumn='-1 / -2' />
             </div>

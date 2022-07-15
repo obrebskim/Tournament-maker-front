@@ -7,13 +7,13 @@ export interface newsTumbnailType {
     feed: string,
 }
 
-export interface TournamentTileType {
+export interface TournamentTumbnailType {
     id: string,
-    image: string,
+    image: string | null,
     name: string,
-    location: string,
+    city: string,
     pool: number,
-    currency: string,
+    currency_code: string,
     description: string,
     date: string,
     time: string,
