@@ -9,11 +9,19 @@ import Button from '../Common/Button'
 export default function Tournament() {
     const { id } = useParams()
 
-    const [tournament, setTournament] = useState<TournamentType | null>(tournamentInfoDB)
+    const [tournament, setTournament] = useState<TournamentType | null>(null)
+    const [loading, setLoading] = useState<boolean>(true)
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+        setLoading(true)
+        window.scrollTo(0, 0);
+        (async () => {
+            const response = await fetch(`http://localhost:3001/tournament/${id}`)
+            const data = await response.json()
+            setTournament(data)
+            setLoading(false)
+        })()
+    }, [id])
 
     const handleSignUp = () => {
         console.log('sign up!')
@@ -22,31 +30,34 @@ export default function Tournament() {
     return (
         <Container>
             {
-                tournament === null ?
-                    <p>nothing</p>
+                loading ?
+                    <p>Loading...</p>
                     :
-                    <>
-                        <div className="image">
-                            <img src={tournament.image} alt="" />
-                        </div>
-                        <div className="tournament-info">
-                            <h2>{tournament.name}, id: {id}</h2>
-                            <p>Location: {tournament.city}, {tournament.country}</p>
-                            <p>Address: {tournament.address}, {tournament.country}</p>
-                            <p>Date: {tournament.date}, {tournament.time}</p>
-                            <p>Price: {tournament.price} {tournament.currency}</p>
-                            <p>Pool: {tournament.pool} {tournament.currency}</p>
-                            {
-                                tournament.url &&
-                                <p>Event website: <a href={tournament.url}>{tournament.name}</a></p>
-                            }
-                            <Button text='sign up!' color='var(--main-gradient)' onclick={handleSignUp} width='200px' />
-                        </div>
-                        <div className="description">
-                            <h3>About tournament / sign up</h3>
-                            <p>{tournament.description}</p>
-                        </div>
-                    </>
+                    tournament === null ?
+                        <p>Ups! This tournament does not exist!</p>
+                        :
+                        <>
+                            <div className="image">
+                                <img src={tournament.image ? tournament.image : "https://thumbs.dreamstime.com/b/volleyball-court-beach-24829462.jpg"} alt="" />
+                            </div>
+                            <div className="tournament-info">
+                                <h2>{tournament.name}, id: {id}</h2>
+                                <p>Location: {tournament.city}, {tournament.country_code}</p>
+                                <p>Address: {tournament.address}</p>
+                                <p>Date: {tournament.date}, {tournament.time}</p>
+                                <p>Price: {tournament.price} {tournament.currency_code}</p>
+                                <p>Pool: {tournament.pool} {tournament.currency_code}</p>
+                                {
+                                    tournament.url &&
+                                    <p>Event website: <a href={tournament.url}>{tournament.name}</a></p>
+                                }
+                                <Button text='sign up!' color='var(--main-gradient)' onclick={handleSignUp} width='200px' />
+                            </div>
+                            <div className="description">
+                                <h3>About tournament / sign up</h3>
+                                <p>{tournament.description}</p>
+                            </div>
+                        </>
 
             }
         </Container>

@@ -30,12 +30,6 @@ export default function CreateTournamentForm() {
                     </div>
                     <p>country</p>
                 </label>
-                <label htmlFor='region'>
-                    <div className="select">
-                        <Select options={regions} />
-                    </div>
-                    <p>region</p>
-                </label>
                 <label htmlFor='city'>
                     <div className="select">
                         <Select options={cities} />
