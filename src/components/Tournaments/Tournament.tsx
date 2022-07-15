@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
 import { TournamentType } from '../../Types/interfaces'
-import tournamentInfoDB from '../../fakeDB/tournamentInfo.json'
 import Button from '../Common/Button'
 
 
@@ -42,11 +41,11 @@ export default function Tournament() {
                             </div>
                             <div className="tournament-info">
                                 <h2>{tournament.name}, id: {id}</h2>
-                                <p>Location: {tournament.city}, {tournament.country_code}</p>
+                                <p>Location: {tournament.city}, {tournament.country}</p>
                                 <p>Address: {tournament.address}</p>
                                 <p>Date: {tournament.date}, {tournament.time}</p>
-                                <p>Price: {tournament.price} {tournament.currency_code}</p>
-                                <p>Pool: {tournament.pool} {tournament.currency_code}</p>
+                                <p>Price: {tournament.price} {tournament.currency}</p>
+                                <p>Pool: {tournament.pool} {tournament.currency}</p>
                                 {
                                     tournament.url &&
                                     <p>Event website: <a href={tournament.url}>{tournament.name}</a></p>

@@ -22,7 +22,7 @@ export interface TournamentTileType {
 
 export interface OptionType {
     label: string,
-    value: string,
+    value: string | number,
 }
 
 export interface FilterItemType {
@@ -42,8 +42,8 @@ export interface TournamentType {
     description: string,
     image: string | null,
     url: string | null,
-    currency_code: string,
-    country_code: string,
-    owner_id: string,
+    currency: string,
+    country: string,
+    owner: string,
     type: number,
 }
