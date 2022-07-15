@@ -1,28 +1,28 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 interface Props {
     text: string,
-    color: string,
+    to: string,
+    gridColumn?: string,
+    height?: string,
     width?: string,
-    type?: "button" | "submit" | "reset" | undefined,
-    onclick: (param: any) => void,
 }
 
-export default function Button({ text, color, type = undefined, width = '100%', onclick = () => { } }: Props) {
-
+export default function RedirectBtn({ text, to, height = '36px', width = 'auto', gridColumn = 'auto' }: Props) {
     return (
-        <Container style={{ background: color, width }} color={color} type={type} onClick={onclick}>
-            <p>{text}</p>
+        <Container style={{ height, gridColumn, width }}>
+            <Link to={to}>{text}</Link>
         </Container>
     )
 }
 
 const Container = styled.button`
-    min-height: 36px;
     position: relative;
-    background: ${props => props.color};
+    background: var(--main-gradient);
     border: none;
+    font-family:'Montserrat', sans-serif;
     font-weight: bold;
     cursor: pointer;
     overflow: hidden;
@@ -32,7 +32,7 @@ const Container = styled.button`
             transform: translateY(0);
         }
 
-        & p {
+        & a {
             color: white;
         }
 
@@ -50,8 +50,14 @@ const Container = styled.button`
         transition: all .2s;
     }
 
-    & p {
+    & a {
+        height: 100%;
+        width: 100%;
         position: relative;
+        display: grid;
+        place-items: center;
+        text-decoration: none;
+        color: var(--main-dark);
         transition: color .2s;
     }
 `
